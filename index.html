@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comparação de Combustível</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div id="fase1">
+        <h1>Comparação de Combustível</h1>
+        <p>Escolha o tipo de combustível:</p>
+        <select id="tipo-combustivel">
+            <option value="">Selecione</option>
+            <option value="gasolina">Gasolina</option>
+            <option value="etanol">Etanol</option>
+            <option value="flex">Flex</option>
+        </select>
+        <button id="avancar-fase1">Avançar</button>
+    </div>
+
+    <div id="fase2" class="hidden">
+        <h2>Informações do Combustível</h2>
+        <div id="form-gasolina" class="hidden">
+            <label for="valor-combustivel-gasolina">Valor da Gasolina:</label>
+            <input type="number" id="valor-combustivel-gasolina" step="0.01">
+            <label for="consumo-combustivel-gasolina">Consumo da Gasolina (km/l):</label>
+            <input type="number" id="consumo-combustivel-gasolina" step="0.01">
+        </div>
+        <div id="form-etanol" class="hidden">
+            <label for="valor-combustivel-etanol">Valor do Etanol:</label>
+            <input type="number" id="valor-combustivel-etanol" step="0.01">
+            <label for="consumo-combustivel-etanol">Consumo do Etanol (km/l):</label>
+            <input type="number" id="consumo-combustivel-etanol" step="0.01">
+        </div>
+        <div id="form-flex" class="hidden">
+        </div>
+        <button id="avancar-fase2">Avançar</button>
+    </div>
+
+    <div id="fase3" class="hidden">
+        <h2>Dados do Veículo</h2>
+        <label for="km-diaria">Km Diária:</label>
+        <input type="number" id="km-diaria" step="0.01">
+        <label for="dias-uteis">Dias Úteis:</label>
+        <input type="number" id="dias-uteis">
+        <button id="calcular">Calcular</button>
+    </div>
+
+    <div id="fase4" class="hidden">
+        <h2>Resultados</h2>
+        <p id="resultado-texto"></p>
+        <canvas id="grafico"></canvas>
+    </div>
+</body>
+</html>
